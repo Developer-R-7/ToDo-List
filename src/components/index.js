@@ -1,20 +1,13 @@
 import React from 'react';
 import ListView from './ListItemView';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import callSuccessToast from '../utils/toastify';
 
 export default function ListAdd() {
   
     const addItem =  () => {
-        toast.success('Task Added!', {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
-        });
+        callSuccessToast("Added Task!!");
     }
 
     return (
@@ -31,7 +24,7 @@ export default function ListAdd() {
             <div className="col col-11 mx-auto">
                 <div className="row bg-white rounded shadow-sm p-2 add-todo-wrapper align-items-center justify-content-center">
                     <div className="col">
-                        <input className="form-control form-control-lg border-0 add-todo-input bg-transparent rounded" type="text" placeholder="Add new .."/>
+                        <input className="form-control form-control-lg border-0 add-todo-input bg-transparent rounded" type="text" placeholder="Add new .." required typeof='text'/>
                     </div>
                     <div className="col-auto m-0 px-2 d-flex align-items-center">
                         <label className="text-secondary my-2 p-0 px-1 view-opt-label due-date-label d-none">Due date not set</label>
