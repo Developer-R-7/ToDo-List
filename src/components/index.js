@@ -1,10 +1,20 @@
 import React from 'react';
-import ListView from './ListView';
+import ListView from './ListItemView';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function ListAdd() {
   
     const addItem =  () => {
-        alert("Hello world")
+        toast.success('Task Added!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
     }
 
     return (
@@ -30,6 +40,7 @@ export default function ListAdd() {
                     </div>
                     <div className="col-auto px-0 mx-0 mr-2">
                         <button type="button" className="btn btn-primary" onClick={addItem}>Add</button>
+                        <ToastContainer/>
                     </div>
                 </div>
             </div>

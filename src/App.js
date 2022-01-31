@@ -1,5 +1,5 @@
 import './App.css';
-import ListAdd from './components/ListAdd';
+import ListAdd from './components';
 import Navbar from './components/Navbar';
 
 
